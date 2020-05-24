@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Drawing;
 
-namespace Balls_Holes
+namespace Tilt_Game.Models
 {
     public class Ball
     {
-
         public int Id { get; }
         public Point Coordinates { get; internal set; }
         public int? HoleId { get; internal set; }

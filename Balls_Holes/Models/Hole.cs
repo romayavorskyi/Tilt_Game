@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Drawing;
 
-namespace Balls_Holes
+namespace Tilt_Game.Models
 {
     public class Hole
     {
