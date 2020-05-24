@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tilt_Game", "Balls_Holes\Tilt_Game.csproj", "{5596AB50-4C05-409A-9F7C-68E62D462528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tilt_Game.Tests", "Balls_Holes.Tests\Tilt_Game.Tests.csproj", "{6B9CD4FC-957A-483F-8229-950034DBC880}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5596AB50-4C05-409A-9F7C-68E62D462528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5596AB50-4C05-409A-9F7C-68E62D462528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5596AB50-4C05-409A-9F7C-68E62D462528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5596AB50-4C05-409A-9F7C-68E62D462528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B9CD4FC-957A-483F-8229-950034DBC880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B9CD4FC-957A-483F-8229-950034DBC880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B9CD4FC-957A-483F-8229-950034DBC880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B9CD4FC-957A-483F-8229-950034DBC880}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90592B0A-9CB4-4000-9904-32F56DCE6281}
+	EndGlobalSection
+EndGlobal
