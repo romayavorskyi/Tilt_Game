@@ -9,11 +9,11 @@ namespace Tilt_Game.Managers
 {
     public class TiltPlayer
     {
-        private TiltManager _tiltManager;
+        private readonly TiltManager _tiltManager;
 
-        public TiltPlayer(TiltManager tiltManager)
+        public TiltPlayer()
         {
-            _tiltManager = tiltManager;
+            _tiltManager = new TiltManager();
         }
 
         public (GameState state, List<TiltDirection> directions) GetWinningStrategy(Field field)

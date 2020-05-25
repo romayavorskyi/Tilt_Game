@@ -26,7 +26,6 @@ namespace Tilt_Game.Managers
                     action?.Invoke(ball);
                 }
             }
-            Console.WriteLine(field.ToString());
         }
 
         private Action<Ball> GetTiltAction(TiltDirection direction, int  fieldSize, int ballsBefore)
@@ -45,6 +44,7 @@ namespace Tilt_Game.Managers
             }
         }
 
+        //TODO use same action for GetBallsBeforeCount and GetHoleForBall
         private int GetBallsBeforeCount(Field field, TiltDirection direction, Ball ball)
         {
             switch (direction)
@@ -69,6 +69,34 @@ namespace Tilt_Game.Managers
             }
         }
 
+        private Hole GetHoleForBall(Field field, TiltDirection direction, Ball ball)
+        {
+            switch (direction)
+            {
+                case TiltDirection.North:
+                    return field.Holes.Where(x => !x.BallId.HasValue &&
+                                                  x.Coordinates.X == ball.Coordinates.X &&
+                                                  x.Coordinates.Y > ball.Coordinates.Y).
+                        OrderBy(x => x.Coordinates.Y).FirstOrDefault();
+                case TiltDirection.South:
+                    return field.Holes.Where(x => !x.BallId.HasValue &&
+                                                  x.Coordinates.X == ball.Coordinates.X &&
+                                                  x.Coordinates.Y < ball.Coordinates.Y).
+                        OrderByDescending(x => x.Coordinates.Y).FirstOrDefault();
+                case TiltDirection.West:
+                    return field.Holes.Where(x => !x.BallId.HasValue &&
+                                                  x.Coordinates.Y == ball.Coordinates.Y &&
+                                                  x.Coordinates.X < ball.Coordinates.X).
+                        OrderByDescending(x => x.Coordinates.X).FirstOrDefault();
+                case TiltDirection.East:
+                default:
+                    return field.Holes.Where(x => !x.BallId.HasValue &&
+                                                  x.Coordinates.Y == ball.Coordinates.Y
+                                                  && x.Coordinates.X > ball.Coordinates.X).
+                        OrderBy(x => x.Coordinates.Y).FirstOrDefault();
+            }
+        }
+
         private List<Ball> GetBallsOrder(Field field, TiltDirection direction)
         {
             switch (direction)
@@ -82,34 +110,6 @@ namespace Tilt_Game.Managers
                 case TiltDirection.East:
                 default:
                     return field.Balls.Where(x => !x.HoleId.HasValue).OrderByDescending(x => x.Coordinates.X).ToList();
-            }
-        }
-
-        private Hole GetHoleForBall(Field field, TiltDirection direction, Ball ball)
-        {
-            switch (direction)
-            {
-                case TiltDirection.North:
-                    return field.Holes.Where(x => !x.BallId.HasValue &&
-                                                 x.Coordinates.X == ball.Coordinates.X &&
-                                                 x.Coordinates.Y > ball.Coordinates.Y).
-                        OrderBy(x => x.Coordinates.Y).FirstOrDefault();
-                case TiltDirection.South:
-                    return field.Holes.Where(x => !x.BallId.HasValue &&
-                                                  x.Coordinates.X == ball.Coordinates.X &&
-                                                  x.Coordinates.Y < ball.Coordinates.Y).
-                    OrderByDescending(x => x.Coordinates.Y).FirstOrDefault();
-                case TiltDirection.West:
-                    return field.Holes.Where(x => !x.BallId.HasValue &&
-                                                  x.Coordinates.Y == ball.Coordinates.Y &&
-                                                  x.Coordinates.X < ball.Coordinates.X).
-                        OrderByDescending(x => x.Coordinates.X).FirstOrDefault();
-                case TiltDirection.East:
-                default:
-                    return field.Holes.Where(x => !x.BallId.HasValue &&
-                                                  x.Coordinates.Y == ball.Coordinates.Y
-                                                  && x.Coordinates.X > ball.Coordinates.X).
-                        OrderBy(x => x.Coordinates.Y).FirstOrDefault();
             }
         }
 

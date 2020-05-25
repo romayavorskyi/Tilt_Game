@@ -7,16 +7,15 @@ using Tilt_Game.Models;
 
 namespace Tilt_Game.Tests
 {
+    //TODO Consider using one test and different test cases
     public class DifferentCoordinatesTests
     {
 
         private readonly TiltManager _tiltManager;
-        private readonly TiltPlayer _tiltPlayer;
 
         public DifferentCoordinatesTests()
         {
             _tiltManager = new TiltManager();
-            _tiltPlayer = new TiltPlayer(_tiltManager);
         }
 
         [SetUp]

@@ -7,6 +7,7 @@ namespace Tilt_Game
     public struct StateResult
     {
         public GameState GameState { get; }
+        //TODO Use BallsInHolesCount to sort field states before adding to queue
         public int BallsInHolesCount { get; set; }
 
         public StateResult(GameState gameState, int ballsCount)

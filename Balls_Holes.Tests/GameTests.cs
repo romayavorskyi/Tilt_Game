@@ -9,14 +9,14 @@ using Tilt_Game.Models;
 
 namespace Tilt_Game.Tests
 {
+    //TODO Consider using one test and different test cases
     class GameTests
     {
         private readonly TiltPlayer _tiltPlayer;
 
         public GameTests()
         {
-            var tiltManager = new TiltManager();
-            _tiltPlayer = new TiltPlayer(tiltManager);
+            _tiltPlayer = new TiltPlayer();
         }
 
         [SetUp]

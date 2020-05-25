@@ -7,6 +7,7 @@ using Tilt_Game.Models;
 
 namespace Tilt_Game.Tests
 {
+    //TODO Consider using one test and different test cases
     public class AdjustmentCoordinatesTests
     {
 
