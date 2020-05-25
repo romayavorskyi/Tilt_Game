@@ -1,4 +1,4 @@
-# Tilt_Game
+# Tilt Game
 
 **Input:** Field n*n, m balls with different coordinates and m holes with different coordinates are on field. Each ball has ID and a hole with same ID. 
 
