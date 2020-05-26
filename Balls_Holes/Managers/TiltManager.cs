@@ -45,6 +45,7 @@ namespace Tilt_Game.Managers
         }
 
         //TODO use same action for GetBallsBeforeCount and GetHoleForBall
+        //TODO Linq can cause bad performance for big collections. THink about optimizations
         private int GetBallsBeforeCount(Field field, TiltDirection direction, Ball ball)
         {
             switch (direction)

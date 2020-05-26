@@ -18,6 +18,7 @@ namespace Tilt_Game.Managers
 
         public (GameState state, List<TiltDirection> directions) GetWinningStrategy(Field field)
         {
+            //TODO Check that each ball has corresponding hole
             var usedStates = new HashSet<string>();
             Queue<FieldNode> queue = new Queue<FieldNode>();
             queue.Enqueue(new FieldNode(field, new List<TiltDirection>()));
