@@ -2,7 +2,7 @@
 
 **Input:** Field n*n, m balls with different coordinates and m holes with different coordinates are on field. Each ball has ID and a hole with same ID. 
 
-**Conditions:** Field can be tilted in one of four directions: north, south, east, west. After the tilt ball moves in corresponding direction until it hits the wall, hits another ball or fall into the hole. Hole counts as occupied after ball falls into it, second ball moves above the hole.
+**Conditions:** Field can be tilted in one of four directions: north, south, east, west. After the tilt ball moves in corresponding direction until it hits the wall, hits another ball or falls into the hole. Hole counts as occupied after ball falls into it, any other ball moves above the hole.
 
 **Win condition:** All balls fell into holes with corresponding id.
 
